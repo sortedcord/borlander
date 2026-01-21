@@ -1,4 +1,4 @@
-/* Apply the classic Blue background and Yellow text */
+/* 1. Global Reset (The Borland Look) */
 html,
 body,
 div,
@@ -11,14 +11,29 @@ article {
     border-color: #FFFFB6 !important;
 }
 
-/* Links (using the Cyan/Bright Blue from your palette) */
+video,
+.html5-video-player,
+.html5-video-container,
+.ytp-gradient-bottom,
+.ytp-gradient-top,
+.ytp-chrome-bottom,
+canvas {
+    background-color: transparent !important;
+}
+
+/* prevent the "Blue Box" */
+div[class*="player"],
+div[class*="video"],
+div[class*="overlay"] {
+    background-color: transparent !important;
+}
+
 a,
 a * {
     color: #B5DCFF !important;
     text-decoration: underline !important;
 }
 
-/* Headers (using the White/Bright White) */
 h1,
 h2,
 h3,
@@ -28,24 +43,11 @@ h6 {
     color: #FFFFFF !important;
 }
 
-/* Input fields and buttons */
 input,
 textarea,
 button,
 select {
     background-color: #4F4F4F !important;
-    /* Dark Grey for contrast */
     color: #FFFF4E !important;
     border: 1px solid #EEEEEE !important;
-}
-
-/* Scrollbars to match the aesthetic */
-::-webkit-scrollbar {
-    width: 12px;
-    background: #0000A4;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #4F4F4F;
-    border: 1px solid #FFFF4E;
 }
