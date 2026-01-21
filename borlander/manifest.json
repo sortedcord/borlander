@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "Borlander",
+    "version": "1.0",
+    "description": "Applies the classic Borland blue and yellow theme to all websites.",
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "css": [
+                "styles.css"
+            ]
+        }
+    ]
+}

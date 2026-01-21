@@ -1,0 +1,51 @@
+/* Apply the classic Blue background and Yellow text */
+html,
+body,
+div,
+span,
+p,
+section,
+article {
+    background-color: #0000A4 !important;
+    color: #FFFF4E !important;
+    border-color: #FFFFB6 !important;
+}
+
+/* Links (using the Cyan/Bright Blue from your palette) */
+a,
+a * {
+    color: #B5DCFF !important;
+    text-decoration: underline !important;
+}
+
+/* Headers (using the White/Bright White) */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #FFFFFF !important;
+}
+
+/* Input fields and buttons */
+input,
+textarea,
+button,
+select {
+    background-color: #4F4F4F !important;
+    /* Dark Grey for contrast */
+    color: #FFFF4E !important;
+    border: 1px solid #EEEEEE !important;
+}
+
+/* Scrollbars to match the aesthetic */
+::-webkit-scrollbar {
+    width: 12px;
+    background: #0000A4;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #4F4F4F;
+    border: 1px solid #FFFF4E;
+}
