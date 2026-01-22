@@ -3,13 +3,39 @@
     "name": "Borlander",
     "version": "1.0",
     "description": "Applies the classic Borland blue and yellow theme to all websites.",
+    "permissions": [
+        "storage",
+        "tabs"
+    ],
     "content_scripts": [
         {
             "matches": [
                 "<all_urls>"
             ],
-            "css": [
+            "exclude_matches": [
+                "*://monkeytype.com/*",
+                "*://*.monkeytype.com/*"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": [
                 "styles.css"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        },
+        {
+            "resources": [
+                "sites/github.com/styles.css"
+            ],
+            "matches": [
+                "https://github.com/*"
             ]
         }
     ]

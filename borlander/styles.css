@@ -1,9 +1,37 @@
-/* 1. Global Reset (The Borland Look) */
+:root {
+    --bgColor-default: #0000A4 !important;
+    --bgColor-muted: #000080 !important;
+    --bgColor-inset: #000060 !important;
+
+    --fgColor-default: #FFFF4E !important;
+    --fgColor-muted: #EEEEEE !important;
+    --fgColor-accent: #B5DCFF !important;
+
+    --button-default-bgColor-rest: #4F4F4F !important;
+    --button-default-fgColor-rest: #FFFF4E !important;
+    --control-bgColor-rest: #4F4F4F !important;
+
+    --color-ansi-blue: #96CBFE !important;
+    --color-ansi-cyan: #C6C5FE !important;
+    --color-ansi-green: #A8FF60 !important;
+    --color-ansi-red: #FF6C60 !important;
+}
+
+video,
+.html5-video-player,
+.html5-video-container {
+    background-color: transparent !important;
+}
+
+
 html,
 body,
 div,
 span,
+nav,
 p,
+footer,
+textarea,
 section,
 article {
     background-color: #0000A4 !important;
@@ -14,18 +42,38 @@ article {
 video,
 .html5-video-player,
 .html5-video-container,
-.ytp-gradient-bottom,
-.ytp-gradient-top,
 .ytp-chrome-bottom,
 canvas {
     background-color: transparent !important;
 }
 
-/* prevent the "Blue Box" */
 div[class*="player"],
 div[class*="video"],
 div[class*="overlay"] {
     background-color: transparent !important;
+}
+
+input,
+textarea,
+select,
+button,
+input[type="text"],
+input[type="search"],
+input[type="email"],
+#search-input,
+.gsfi {
+    background-color: #4F4F4F !important;
+    color: #FFFF4E !important;
+    border: 2px solid #EEEEEE !important;
+    border-radius: 0px !important;
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    box-shadow: none !important;
+}
+
+::placeholder {
+    color: #7C7C7C !important;
+    opacity: 1;
 }
 
 a,
@@ -41,13 +89,4 @@ h4,
 h5,
 h6 {
     color: #FFFFFF !important;
-}
-
-input,
-textarea,
-button,
-select {
-    background-color: #4F4F4F !important;
-    color: #FFFF4E !important;
-    border: 1px solid #EEEEEE !important;
 }

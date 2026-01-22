@@ -1,0 +1,13 @@
+:root {
+    --contribution-default-bgColor-0: #4F4F4F !important;
+    --contribution-default-bgColor-1: #FFFFB6 !important;
+    --contribution-default-bgColor-2: #FFFFCC !important;
+    --contribution-default-bgColor-3: #FFFF4E !important;
+    --contribution-default-bgColor-4: #ffea00 !important;
+
+    --contribution-default-borderColor-0: #4F4F4F !important;
+}
+
+.ContributionCalendar-label {
+    color: #FFFF4E !important;
+}
