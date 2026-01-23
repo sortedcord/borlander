@@ -1,0 +1,69 @@
+:root {
+    /* --- Core Surfaces & Text --- */
+    --pageBackground: #0000A4 !important;
+    /* Background */
+    --pageHeaderBackgroundColor: #000064 !important;
+    /* Cyan Header */
+    --sidebarBackgroundColor: #000064 !important;
+    --modalBackgroundColor: #0000A4 !important;
+    --cardBackgroundColor: #000080 !important;
+    /* Slightly darker blue */
+
+    --textColor: #FFFF4E !important;
+    /* Foreground Text */
+    --defaultColor: #FFFF4E !important;
+    --white: #FFFFFF !important;
+    --offWhite: #EEEEEE !important;
+
+    /* --- Brand & Accents --- */
+    --sonarrBlue: #96CBFE !important;
+    /* Borland Blue */
+    --primaryColor: #96CBFE !important;
+    --themeBlue: #96CBFE !important;
+    --selectedColor: #FFFFB6 !important;
+    /* Borland Yellow */
+
+    /* --- Status & Alerts (EGA/VGA Standard) --- */
+    --successColor: #679e3a !important;
+    /* Borland Green */
+    --successBackgroundColor: #639738 !important;
+    --dangerColor: #FF6C60 !important;
+    /* Borland Red */
+    --dangerBackgroundColor: #FF6C60 !important;
+    --warningColor: #FFFFB6 !important;
+    /* Borland Yellow */
+    --warningBackgroundColor: #FFFFB6 !important;
+    --infoColor: #C6C5FE !important;
+    /* Borland Cyan */
+
+    /* --- Navigation & Sidebar --- */
+    --sidebarColor: #FFFF4E !important;
+    /* Sidebar Text */
+    --sidebarActiveBackgroundColor: #0000A4 !important;
+    /* Highlight Grey */
+    --menuItemColor: #FFFF4E !important;
+    --menuItemHoverBackgroundColor: #4F4F4F !important;
+
+    /* --- Inputs & Interactive --- */
+    --inputBackgroundColor: #4F4F4F !important;
+    /* Grey Host background */
+    --inputBorderColor: #EEEEEE !important;
+    --inputFocusBorderColor: #FFFFB6 !important;
+    --borderColor: #FFFFB6 !important;
+
+    /* --- Buttons --- */
+    --defaultBackgroundColor: #4F4F4F !important;
+    --defaultButtonTextColor: #EEEEEE !important;
+    --primaryBackgroundColor: #96CBFE !important;
+
+    /* --- Calendar & Tables --- */
+    --calendarBackgroundColor: #0000A4 !important;
+    --calendarBorderColor: #1111C0 !important;
+    --tableRowHoverBackgroundColor: rgba(79, 79, 79, 0.5) !important;
+
+    /* --- Scrollbars --- */
+    --scrollbarBackgroundColor: #4F4F4F !important;
+    --scrollbarHoverBackgroundColor: #7C7C7C !important;
+
+    --toolbarBackgroundColor: #000064 !important;
+}

@@ -32,10 +32,31 @@
         },
         {
             "resources": [
+                "styles.css",
+                "sites/sonarr.local/styles.css"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        },
+        {
+            "resources": [
                 "sites/github.com/styles.css"
             ],
             "matches": [
                 "https://github.com/*"
+            ]
+        },
+        {
+            "resources": [
+                "styles.css",
+                "sites/sonarr.local/styles.css",
+                "sites/chess.com/styles.css",
+                "sites/gitea.local/styles.css",
+                "sites/anilist.co/styles.css"
+            ],
+            "matches": [
+                "<all_urls>"
             ]
         }
     ]

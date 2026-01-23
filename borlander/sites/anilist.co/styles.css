@@ -1,0 +1,38 @@
+.site-theme-dark {
+    --color-background: 0, 0, 164 !important;
+    --color-background-200: 0, 0, 164 !important;
+    --color-foreground: 17, 17, 192 !important;
+    --color-foreground-blue: 0, 0, 100 !important;
+    --color-text: 255, 255, 255 !important;
+    --color-foreground-grey-dark: 0, 0, 164;
+    --color-blue: 255, 255, 78 !important;
+    --color-text-lighter: 123, 193, 255 !important;
+    --color-text-light: 255, 255, 255 !important;
+    --color-background-100: 0, 0, 80 !important;
+    --color-foreground-grey: 12, 0, 129 !important;
+}
+
+.bar {
+    background: linear-gradient(270deg, #dce00e, #e4f67c) !important;
+}
+
+.user-page-unscoped.green {
+    --color-blue: 123, 193, 255 !important;
+    --color-blue-dim: 141, 185, 205 !important;
+}
+
+.nav-unscoped {
+    background-color: #000064 !important;
+}
+
+.create-btn {
+    color: #000064 !important;
+}
+
+.button.comment {
+    color: #000080 !important;
+}
+
+.wrap .footer {
+    background-color: #000064 !important;
+}

@@ -1,0 +1,35 @@
+:root {
+    --color-body: #0000A4;
+    --color-primary: #FFFF4E;
+    --color-nav-bg: #000064;
+    --color-secondary-alpha-60: #0000A4;
+    --color-primary-light-4: #4141A9;
+    --color-primary-light-2: #888887;
+    --color-primary-dark-2: #abff37;
+    --color-primary-dark-4: #4fff23;
+    --color-box-header: #000080;
+    --color-secondary: #1111C0;
+    --color-box-body: #000064;
+    --color-active: #1111C0;
+    --color-menu: #000064;
+    --color-input-background: #0000A4;
+    --color-button: #0000A4;
+    --color-nav-hover-bg: #1111C0;
+    --color-secondary-nav-bg: #000080;
+    --color-card: #000080;
+    --color-secondary-light-1: #1111C0;
+}
+
+.tw-border-b-secondary {
+    background-color: #000064 !important;
+}
+
+.activity-heatmap-container {
+    background-color: #1111C0 !important;
+    padding: 2px 2px 2px 2px;
+    border-radius: 9px;
+}
+
+#navbar-logo img {
+    filter: hue-rotate(120deg);
+}
