@@ -5,8 +5,15 @@
     "description": "Applies the classic Borland blue and yellow theme to all websites.",
     "permissions": [
         "storage",
-        "tabs"
+        "tabs",
+        "scripting"
     ],
+    "host_permissions": [
+        "<all_urls>"
+    ],
+    "action": {
+        "default_popup": "popup.html"
+    },
     "content_scripts": [
         {
             "matches": [
@@ -24,36 +31,12 @@
     "web_accessible_resources": [
         {
             "resources": [
-                "styles.css"
-            ],
-            "matches": [
-                "<all_urls>"
-            ]
-        },
-        {
-            "resources": [
-                "styles.css",
-                "sites/sonarr.local/styles.css"
-            ],
-            "matches": [
-                "<all_urls>"
-            ]
-        },
-        {
-            "resources": [
-                "sites/github.com/styles.css"
-            ],
-            "matches": [
-                "https://github.com/*"
-            ]
-        },
-        {
-            "resources": [
                 "styles.css",
                 "sites/sonarr.local/styles.css",
                 "sites/chess.com/styles.css",
                 "sites/gitea.local/styles.css",
-                "sites/anilist.co/styles.css"
+                "sites/anilist.co/styles.css",
+                "sites/github.com/styles.css"
             ],
             "matches": [
                 "<all_urls>"

@@ -4,27 +4,68 @@
 <head>
     <style>
         body {
-            width: 180px;
-            padding: 10px;
-            font-family: sans-serif;
+            width: 220px;
+            padding: 12px;
+            font-family: 'Courier New', Courier, monospace;
             background: #0000A4;
             color: #FFFF4E;
+            margin: 0;
+            border: 2px solid #FFF;
+        }
+
+        h4 {
+            margin: 0 0 12px 0;
+            font-size: 14px;
+            text-align: center;
+            border-bottom: 1px solid #FFF;
+            padding-bottom: 5px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .button-row {
+            display: flex;
+            gap: 8px;
         }
 
         button {
-            width: 100%;
+            flex: 1;
             cursor: pointer;
-            background: #4F4F4F;
+            background: #0000A4;
             color: #FFFF4E;
-            border: 1px solid #FFF;
-            padding: 5px;
+            border: 1px solid #FFFF4E;
+            padding: 8px 4px;
+            font-size: 10px;
+            font-weight: bold;
+            text-transform: uppercase;
+            box-shadow: 3px 3px 0px #000;
+            outline: none;
+        }
+
+        button:hover {
+            background: #FFFF4E;
+            color: #0000A4;
+        }
+
+        button:active {
+            box-shadow: none;
+            transform: translate(2px, 2px);
+        }
+
+        #theme-mode-btn {
+            display: none;
+            /* Managed by JS */
         }
     </style>
 </head>
 
 <body>
     <h4 id="site-name">Domain</h4>
-    <button id="toggle-btn">Disable on this site</button>
+    <div class="button-row">
+        <button id="toggle-btn">Disable</button>
+        <button id="theme-mode-btn">Static Theme</button>
+    </div>
     <script src="popup.js"></script>
 </body>
 
