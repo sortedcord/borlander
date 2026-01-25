@@ -7,6 +7,7 @@ chrome.storage.local.get([domain, `${domain}_mode`], (result) => {
     let siteMatched = false;
 
     if (!forceGlobal) {
+
         // 1. SONARR
         const isSonarr = getComputedStyle(document.documentElement).getPropertyValue('--sonarrBlue').trim() !== "" ||
             document.title.toLowerCase().includes('sonarr');
@@ -30,6 +31,10 @@ chrome.storage.local.get([domain, `${domain}_mode`], (result) => {
         // 5. GITHUB
         if (!siteMatched && domain.includes('github.com')) {
             injectSiteStyle('sites/github.com/styles.css'); siteMatched = true;
+        }
+
+        if (!siteMatched && domain.includes('solana.com')) {
+            injectSiteStyle('sites/solana.com/styles.css'); siteMatched = true;
         }
     }
 

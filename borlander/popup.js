@@ -23,8 +23,9 @@ chrome.tabs.query({ active: true, currentWindow: true }, async (tabs) => {
                 const isAnilist = domain.includes('anilist.co');
                 const isGitea = !!document.querySelector('meta[content*="gitea"]') || domain.includes('gitea');
                 const isGithub = domain.includes('github.com');
+                const isSolana = domain.includes('solana.com');
 
-                return isSonarr || isChess || isAnilist || isGitea || isGithub;
+                return isSonarr || isChess || isSolana || isAnilist || isGitea || isGithub;
             }
         });
         hasSpecificTheme = detectionResult[0]?.result || false;

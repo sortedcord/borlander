@@ -1,0 +1,30 @@
+:root {
+    --body-bg: #0000A4 !important;
+    --body-text: #fafafafa !important;
+    --body-text-secondary: #85acfffa !important;
+    --mdx-link-color: #ffff4e !important;
+    --mdx-link-color-hover: #ffff4e !important;
+    --fd-border: 240 84% 41% !important;
+    --fd-muted-background: 240 85% 41% !important;
+}
+
+.\!no-underline {
+    color: #678ddf !important;
+}
+
+.fumadocs article a {
+    --tw-prose-links: #ffff4e !important;
+}
+
+.fumadocs {
+    --fd-muted-background: 240 85% 41% !important;
+}
+
+.text-fd-muted-foreground {
+    color: #678dff;
+}
+
+.bg-\[rgb\(18_18_18\/95\%\)\],
+.bg-\[rgb\(18_18_18_\/_95\%\)\] {
+    background-color: #000080;
+}

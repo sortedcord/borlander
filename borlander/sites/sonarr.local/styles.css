@@ -33,7 +33,7 @@
     --warningColor: #FFFFB6 !important;
     /* Borland Yellow */
     --warningBackgroundColor: #FFFFB6 !important;
-    --infoColor: #C6C5FE !important;
+    --infoColor: #C6C5FE !importantK;
     /* Borland Cyan */
 
     /* --- Navigation & Sidebar --- */
@@ -55,6 +55,7 @@
     --defaultBackgroundColor: #4F4F4F !important;
     --defaultButtonTextColor: #EEEEEE !important;
     --primaryBackgroundColor: #96CBFE !important;
+    --helpTextColor: #c3c3ff !important;
 
     /* --- Calendar & Tables --- */
     --calendarBackgroundColor: #0000A4 !important;
