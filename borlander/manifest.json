@@ -37,7 +37,8 @@
                 "sites/gitea.local/styles.css",
                 "sites/anilist.co/styles.css",
                 "sites/github.com/styles.css",
-                "sites/solana.com/styles.css"
+                "sites/solana.com/styles.css",
+                "sites/chatgpt.com/styles.css"
             ],
             "matches": [
                 "<all_urls>"

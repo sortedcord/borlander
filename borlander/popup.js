@@ -24,8 +24,9 @@ chrome.tabs.query({ active: true, currentWindow: true }, async (tabs) => {
                 const isGitea = !!document.querySelector('meta[content*="gitea"]') || domain.includes('gitea');
                 const isGithub = domain.includes('github.com');
                 const isSolana = domain.includes('solana.com');
+                const isChatgpt = domain.includes('chatgpt.com');
 
-                return isSonarr || isChess || isSolana || isAnilist || isGitea || isGithub;
+                return isSonarr || isChess || isSolana || isAnilist || isChatgpt || isGitea || isGithub;
             }
         });
         hasSpecificTheme = detectionResult[0]?.result || false;

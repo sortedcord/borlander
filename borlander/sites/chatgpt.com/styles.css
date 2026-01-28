@@ -1,0 +1,168 @@
+.dark {
+    /* --- Main Surfaces (Turbo Blue) --- */
+    --main-surface-background: #0000A4 !important;
+    --main-surface-primary: #0000A4 !important;
+    --main-surface-secondary: #000080 !important;
+    /* Slightly darker for depth */
+    --main-surface-tertiary: #4F4F4F !important;
+    /* Grey for panels */
+    --message-surface: #000080 !important;
+    --surface-hover: #4F4F4F !important;
+    /* Grey highlight */
+
+    /* --- Composer & Interaction (Cyan/Blue logic) --- */
+    --composer-blue-bg: #4F4F4F !important;
+    --composer-blue-hover: #7C7C7C !important;
+    --composer-blue-text: #FFFF4E !important;
+    --composer-surface-primary: #000080 !important;
+
+    /* --- Sidebar (Cyan Menu Aesthetic) --- */
+    --sidebar-surface: #0000A4 !important;
+    --sidebar-surface-primary: #C6C5FE !important;
+    /* Cyan top-bar style */
+    --sidebar-surface-secondary: #000080 !important;
+    --sidebar-surface-tertiary: #4F4F4F !important;
+    --sidebar-body-primary: #FFFF4E !important;
+    --sidebar-title-primary: #000000 !important;
+    /* Black text on Cyan bg */
+    --sidebar-icon: #000000 !important;
+
+    /* --- Text & Content (Yellow/White) --- */
+    --text-primary: #FFFF4E !important;
+    /* Borland Yellow */
+    --text-primary-inverse: #0000A4 !important;
+    /* Blue text on Yellow bg */
+    --text-secondary: #EEEEEE !important;
+    /* Off-white */
+    --text-tertiary: #C6C5FE !important;
+    /* Cyan for metadata */
+    --text-quaternary: #7C7C7C !important;
+    /* Bright Black/Grey */
+    --text-placeholder: #7C7C7C !important;
+    --content-primary: #FFFF4E !important;
+    --content-secondary: #EEEEEE !important;
+    --text-error: #FF6C60 !important;
+    /* Borland Red */
+
+    /* --- Borders & Dots (High Contrast) --- */
+    --border-xlight: #C6C5FE !important;
+    --border-light: #C6C5FE !important;
+    --border-medium: #FFFFB6 !important;
+    /* Light Yellow */
+    --border-heavy: #EEEEEE !important;
+    /* White */
+    --border-xheavy: #FFFFFF !important;
+    --border-sharp: #FFFFFF !important;
+    --dot-color: #FFFF4E !important;
+
+    /* --- Links & Interaction --- */
+    --link: #B5DCFF !important;
+    /* Bright Blue/Cyan */
+    --link-hover: #96CBFE !important;
+    --icon-surface: 255 255 78;
+    /* Yellow (RGB format) */
+    --surface-error: 255 108 96;
+    /* Red (RGB format) */
+
+    /* --- Scrollbars --- */
+    --scrollbar-color: #4F4F4F !important;
+    --scrollbar-color-hover: #7C7C7C !important;
+
+    /* --- Core Backgrounds (The "Turbo" Blue) --- */
+    --bg-primary: #0000A4 !important;
+    --bg-primary-inverted: #FFFF4E !important;
+    /* Yellow */
+    --bg-secondary: #000080 !important;
+    /* Darker Blue */
+    --bg-tertiary: #4F4F4F !important;
+    /* Grey Host */
+    --bg-scrim: rgba(0, 0, 0, 0.8) !important;
+    /* Solid Black Overlay */
+    --bg-elevated-primary: #0000A4 !important;
+    --bg-elevated-secondary: #000080 !important;
+    --bg-accent-static: #96CBFE !important;
+    /* Blue Path */
+
+    /* --- Status Colors --- */
+    --bg-status-warning: #FFFFB6 !important;
+    /* Yellow Command */
+    --bg-status-error: #FF6C60 !important;
+    /* Red Syntax */
+    --border-status-warning: #FFFFB6 !important;
+    --border-status-error: #FF6C60 !important;
+    --text-status-warning: #000000 !important;
+    /* High contrast black on yellow */
+    --text-status-error: #FFFFFF !important;
+    /* White on red */
+    --icon-status-warning: #000000 !important;
+    --icon-status-error: #FFFFFF !important;
+
+    /* --- Borders & Geometry --- */
+    --border-default: #C6C5FE !important;
+    /* Cyan Prompt */
+    --border-heavy: #EEEEEE !important;
+    /* White */
+    --border-light: #96CBFE !important;
+    /* Blue Path */
+
+    /* --- Typography (Yellow & White) --- */
+    --text-primary: #FFFF4E !important;
+    /* Borland Yellow */
+    --text-secondary: #EEEEEE !important;
+    /* White */
+    --text-tertiary: #C6C5FE !important;
+    /* Cyan */
+    --text-inverted: #0000A4 !important;
+    /* Blue text for yellow bgs */
+    --text-inverted-static: #0000A4 !important;
+    --text-accent: #B5DCFF !important;
+    /* Bright Blue */
+
+    /* --- Icons --- */
+    --icon-primary: #FFFF4E !important;
+    --icon-secondary: #EEEEEE !important;
+    --icon-tertiary: #C6C5FE !important;
+    --icon-inverted: #0000A4 !important;
+    --icon-accent: #B5DCFF !important;
+
+    /* --- Interactive: Primary (The "Active" Menu Logic) --- */
+    /* When something is selected/active in Borland, it usually flips to Yellow with Blue text */
+    --interactive-bg-primary-default: #FFFF4E !important;
+    --interactive-bg-primary-hover: #FFFFCC !important;
+    /* Bright Yellow */
+    --interactive-bg-primary-press: #FFFFB6 !important;
+    --interactive-bg-primary-selected: #FFFF4E !important;
+    --interactive-label-primary-default: #0000A4 !important;
+    --interactive-icon-primary-default: #0000A4 !important;
+
+    /* --- Interactive: Secondary (The "Button" Logic) --- */
+    --interactive-bg-secondary-default: #4F4F4F !important;
+    /* Grey */
+    --interactive-bg-secondary-hover: #7C7C7C !important;
+    /* Bright Black */
+    --interactive-bg-secondary-press: #EEEEEE !important;
+    /* White */
+    --interactive-label-secondary-default: #FFFF4E !important;
+    --interactive-icon-secondary-default: #FFFF4E !important;
+
+    /* --- Interactive: Tertiary (The "Transparent/Ghost" Logic) --- */
+    /* In Borland, we don't do transparency, so we use the base Blue */
+    --interactive-bg-tertiary-default: #0000A4 !important;
+    --interactive-bg-tertiary-hover: #000080 !important;
+    --interactive-label-tertiary-default: #EEEEEE !important;
+
+    /* --- Interactive: Accent (The "Link/Action" Logic) --- */
+    --interactive-bg-accent-default: #96CBFE !important;
+    --interactive-bg-accent-hover: #B5DCFF !important;
+    --interactive-label-accent-default: #0000A4 !important;
+
+    /* --- Interactive: Danger --- */
+    --interactive-bg-danger-primary-default: #FF6C60 !important;
+    --interactive-bg-danger-primary-hover: #FFB6B0 !important;
+    --interactive-label-danger-primary-default: #FFFFFF !important;
+    --interactive-border-danger-secondary-default: #FF6C60 !important;
+
+    /* --- Utilities --- */
+    --utility-scrollbar: #4F4F4F !important;
+    --interactive-border-focus: #FFFFFF !important;
+}

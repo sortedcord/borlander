@@ -36,6 +36,10 @@ chrome.storage.local.get([domain, `${domain}_mode`], (result) => {
         if (!siteMatched && domain.includes('solana.com')) {
             injectSiteStyle('sites/solana.com/styles.css'); siteMatched = true;
         }
+
+        if (!siteMatched && domain.includes('chatgpt.com')) {
+            injectSiteStyle('sites/chatgpt.com/styles.css'); siteMatched = true;
+        }
     }
 
     if (!siteMatched) {
