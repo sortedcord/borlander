@@ -1,51 +1,79 @@
 const domain = window.location.hostname;
 
-chrome.storage.local.get([domain, `${domain}_mode`], (result) => {
-    if (result[domain] === 'disabled') return;
+async function loadThemesRegistry() {
+    try {
+        const url = chrome.runtime.getURL('themes.json');
+        const res = await fetch(url);
+        if (!res.ok) throw new Error(`Failed to load themes.json: ${res.status}`);
+        return await res.json();
+    } catch (e) {
+        console.warn('Borlander: could not load themes registry, falling back to static theme', e);
+        return { themes: [] };
+    }
+}
 
-    const forceGlobal = result[`${domain}_mode`] === 'global';
-    let siteMatched = false;
+function themeAppliesToPage(theme) {
+    if (!theme) return false;
 
-    if (!forceGlobal) {
-
-        // 1. SONARR
-        const isSonarr = getComputedStyle(document.documentElement).getPropertyValue('--sonarrBlue').trim() !== "" ||
-            document.title.toLowerCase().includes('sonarr');
-        if (isSonarr) { injectSiteStyle('sites/sonarr.local/styles.css'); siteMatched = true; }
-
-        // 2. CHESS.COM
-        if (!siteMatched && (domain.includes('chess.com') || !!document.querySelector('.board-layout-main'))) {
-            injectSiteStyle('sites/chess.com/styles.css'); siteMatched = true;
-        }
-
-        // 3. ANILIST
-        if (!siteMatched && domain.includes('anilist.co')) {
-            injectSiteStyle('sites/anilist.co/styles.css'); siteMatched = true;
-        }
-
-        // 4. GITEA
-        if (!siteMatched && (!!document.querySelector('meta[content*="gitea"]') || domain.includes('gitea'))) {
-            injectSiteStyle('sites/gitea.local/styles.css'); siteMatched = true;
-        }
-
-        // 5. GITHUB
-        if (!siteMatched && domain.includes('github.com')) {
-            injectSiteStyle('sites/github.com/styles.css'); siteMatched = true;
-        }
-
-        if (!siteMatched && domain.includes('solana.com')) {
-            injectSiteStyle('sites/solana.com/styles.css'); siteMatched = true;
-        }
-
-        if (!siteMatched && domain.includes('chatgpt.com')) {
-            injectSiteStyle('sites/chatgpt.com/styles.css'); siteMatched = true;
-        }
+    if (theme.type === 'hostname') {
+        return typeof theme.hostnameIncludes === 'string' && domain.includes(theme.hostnameIncludes);
     }
 
-    if (!siteMatched) {
+    if (theme.type === 'heuristic' && theme.detect) {
+        const d = theme.detect;
+        let ok = false;
+
+        if (typeof d.hostnameIncludes === 'string') {
+            ok = ok || domain.includes(d.hostnameIncludes);
+        }
+        if (typeof d.titleIncludes === 'string') {
+            ok = ok || document.title.toLowerCase().includes(d.titleIncludes.toLowerCase());
+        }
+        if (typeof d.metaContentIncludes === 'string') {
+            ok = ok || !!document.querySelector(`meta[content*="${CSS.escape(d.metaContentIncludes)}"]`);
+        }
+        if (typeof d.cssVarNonEmpty === 'string') {
+            ok = ok || getComputedStyle(document.documentElement)
+                .getPropertyValue(d.cssVarNonEmpty)
+                .trim() !== '';
+        }
+
+        return ok;
+    }
+
+    return false;
+}
+
+function pickBestSiteTheme(themes) {
+    // Prefer hostname matches first, then heuristics.
+    for (const t of themes) {
+        if (t.type === 'hostname' && themeAppliesToPage(t)) return t;
+    }
+    for (const t of themes) {
+        if (t.type === 'heuristic' && themeAppliesToPage(t)) return t;
+    }
+    return null;
+}
+
+(async () => {
+    const registry = await loadThemesRegistry();
+    const themes = Array.isArray(registry.themes) ? registry.themes : [];
+    const applicable = pickBestSiteTheme(themes);
+
+    chrome.storage.local.get([domain, `${domain}_mode`], (result) => {
+        if (result[domain] === 'disabled') return;
+
+        // historical value is "global"; treat as "static".
+        const forceStatic = result[`${domain}_mode`] === 'global' || result[`${domain}_mode`] === 'static';
+
+        if (!forceStatic && applicable?.cssPath) {
+            injectSiteStyle(applicable.cssPath);
+            return;
+        }
+
         injectSiteStyle('styles.css');
-    }
-});
+    });
+})();
 
 function injectSiteStyle(path) {
     const link = document.createElement('link');

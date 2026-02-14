@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "themes": [
+    {
+      "id": "anilist.co",
+      "type": "hostname",
+      "hostnameIncludes": "anilist.co",
+      "cssPath": "sites/anilist.co/styles.css"
+    },
+    {
+      "id": "chatgpt.com",
+      "type": "hostname",
+      "hostnameIncludes": "chatgpt.com",
+      "cssPath": "sites/chatgpt.com/styles.css"
+    },
+    {
+      "id": "chess.com",
+      "type": "hostname",
+      "hostnameIncludes": "chess.com",
+      "cssPath": "sites/chess.com/styles.css"
+    },
+    {
+      "id": "gitea.local",
+      "cssPath": "sites/gitea.local/styles.css",
+      "type": "heuristic",
+      "detect": {
+        "metaContentIncludes": "gitea",
+        "hostnameIncludes": "gitea"
+      }
+    },
+    {
+      "id": "github.com",
+      "type": "hostname",
+      "hostnameIncludes": "github.com",
+      "cssPath": "sites/github.com/styles.css"
+    },
+    {
+      "id": "music.youtube.com",
+      "type": "hostname",
+      "hostnameIncludes": "music.youtube.com",
+      "cssPath": "sites/music.youtube.com/styles.css"
+    },
+    {
+      "id": "solana.com",
+      "type": "hostname",
+      "hostnameIncludes": "solana.com",
+      "cssPath": "sites/solana.com/styles.css"
+    },
+    {
+      "id": "sonarr.local",
+      "cssPath": "sites/sonarr.local/styles.css",
+      "type": "heuristic",
+      "detect": {
+        "titleIncludes": "sonarr",
+        "cssVarNonEmpty": "--sonarrBlue"
+      }
+    },
+    {
+      "id": "web.whatsapp.com",
+      "type": "hostname",
+      "hostnameIncludes": "web.whatsapp.com",
+      "cssPath": "sites/web.whatsapp.com/styles.css"
+    }
+  ]
+}

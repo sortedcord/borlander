@@ -1,0 +1,26 @@
+#main,
+#side {
+    background-color: #0000A4;
+}
+
+#side>div {
+    background-color: #000064 !important;
+}
+
+header,
+#pane-side {
+    background-color: #000064 !important;
+}
+
+.xa3rncp.xa3rncp,
+.xa3rncp.xa3rncp:root {
+    --WDS-surface-default: #000064 !important;
+}
+
+:root {
+    --background-default: #000080 !important;
+}
+
+._ak72 {
+    background-color: #000080 !important;
+}

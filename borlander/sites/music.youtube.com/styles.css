@@ -1,0 +1,16 @@
+#sections {
+    background-color: #000064 !important;
+}
+
+#left-content {
+    background-color: #000064 !important;
+}
+
+.background-gradient {
+    background-image: none !important;
+    background-color: #0000A4 !important;
+}
+
+:root {
+    --ytmusic-nav-bar: #000064 !important;
+}
