@@ -11,3 +11,13 @@
 .ContributionCalendar-label {
     color: #FFFF4E !important;
 }
+
+[data-color-mode=dark][data-dark-theme=dark],
+[data-color-mode=auto][data-light-theme=dark] {
+    --bgColor-default: #0000A4 !important;
+    --bgColor-inset: #000080 !important;
+    --borderColor-default: #6FC3DF !important;
+    --fgColor-accent: #FFFF4E !important;
+    --fgColor-muted: #91b2dc !important;
+    --borderColor-muted: #3d3d84 !important;
+}

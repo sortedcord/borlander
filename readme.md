@@ -16,6 +16,7 @@ The registry lives in `borlander/themes.json` and is loaded by both `content.js`
 If you add/remove site themes in `borlander/sites/`, re-generate the registry:
 
 ```fish
+
 node borlander/scripts/generate-themes.mjs
 ```
 
